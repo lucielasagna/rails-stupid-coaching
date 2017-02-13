@@ -1,19 +1,7 @@
-<h1>Coaching#answer</h1>
+<h1><%= @question %></h1>
 <p>Find me in app/views/coaching/answer.html.erb</p>
 
 
-<% if params[:question].downcase == "i am going to work right now!" %>
-  <h2><%= params[:question] %></h2>
-  <p><%= 'rien' %></p>
+<h2><%= @answer %></h2>
 
-
-<% elsif params[:question].end_with?("?") %>
-  <h2> <%= params[:question]%></h2>
-  <p>"Silly question, get dressed and go to work!"</p>
-
-<% else %>
-  <h2> <%= params[:question]%></h2>
-  <p> "I don't care, get dressed and go to work!" </p>
-<%end%>
-
-<p><%= link_to "Nouvelle question", "ask" %><p>
+<%= link_to "nouvelle question", :back %>
